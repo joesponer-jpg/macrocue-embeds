@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- MacroCue About Embed v3 - 2026-08-19. Subscribe copy updated for emailHelper v7: every contact now gets the FULL daily Vol Brief, so the previous "Formation snapshot" wording understated it. Carries forward v2: the Founding Member pitch and MPI alerts promise are gone and the CTA opens the dashboard. ORDER: correct only AFTER v7 is live - publishing this while v6 runs would OVERSTATE what non-member contacts receive. Predecessor: about_v2.html. -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#05080F;--bg2:#090E18;--bg3:#0D1520;
+  --border:#1A2540;--border2:#243050;
+  --text:#E4DFCF;--muted:#556078;--dim:#8A96A8;
+  --green:#5B9A20;--green-t:#7DC335;--gold-t:#D4AF45;
+  --mono:'JetBrains Mono',monospace;
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+}
+html,body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.6;padding:28px 24px 48px}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+.wrap{max-width:640px;margin:0 auto}
+
+.eyebrow{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold-t);margin-bottom:10px}
+h1{font-family:var(--serif);font-size:clamp(26px,4vw,38px);color:var(--text);line-height:1.1;letter-spacing:-0.02em;margin-bottom:28px}
+
+/* Founder card */
+.card{display:flex;gap:24px;align-items:flex-start;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:24px;margin-bottom:32px}
+@media(max-width:500px){.card{flex-direction:column;align-items:center;text-align:center}}
+.photo{width:96px;height:96px;border-radius:50%;object-fit:cover;border:2px solid var(--border2);flex-shrink:0}
+.name{font-family:var(--serif);font-size:22px;color:var(--text);letter-spacing:-0.01em;margin-bottom:4px}
+.role{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-t);margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tag{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:3px 9px;border-radius:3px;background:rgba(91,154,32,0.12);border:1px solid rgba(91,154,32,0.25);color:var(--green-t)}
+.tag.dim{background:rgba(26,37,64,0.8);border-color:var(--border2);color:var(--dim)}
+.links{display:flex;gap:8px}
+.lnk{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--border2);border-radius:3px;padding:4px 10px;cursor:pointer;transition:color 0.15s,border-color 0.15s}
+.lnk:hover{color:var(--text);border-color:var(--dim)}
+
+hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+.body{color:var(--dim);font-size:14px;line-height:1.85}
+.body p{margin-bottom:14px}
+.body p:last-child{margin-bottom:0}
+.body strong{color:var(--text);font-weight:500}
+
+/* Creds */
+.creds{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.cred{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:11px 14px;flex:1;min-width:160px}
+.cred-val{font-family:var(--mono);font-size:13px;color:var(--text);margin-bottom:3px}
+.cred-key{font-size:11px;color:var(--muted)}
+
+/* Subscribe bar */
+.sub-section{margin-top:24px}
+.sub-form{display:flex;border:1px solid var(--border2);border-radius:5px;overflow:hidden;background:var(--bg2);transition:border-color 0.2s}
+.sub-form:focus-within{border-color:var(--green)}
+.sub-input{flex:1;background:transparent;border:none;outline:none;padding:13px 16px;font-family:var(--sans);font-size:14px;color:var(--text);min-width:0}
+.sub-input::placeholder{color:var(--muted)}
+.sub-btn{background:var(--green);border:none;color:#fff;padding:13px 20px;font-family:var(--sans);font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background 0.2s}
+.sub-btn:hover{background:var(--green-t)}
+.sub-note{font-size:11px;color:var(--muted);margin-top:8px}
+.dash-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-family:var(--sans);font-size:13px;color:var(--dim);border:1px solid var(--border2);border-radius:4px;padding:10px 18px;cursor:pointer;transition:color 0.15s,border-color 0.15s;background:transparent}
+.dash-link:hover{color:var(--text);border-color:var(--dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">About</div>
+  <h1>The person behind<br>the model.</h1>
+
+  <div class="card">
+	<img class="photo" src="data:image/png;base64,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" alt="Joe Sponer">
+    <div>
+      <div class="name">Joe Sponer</div>
+      <div class="role">Founder, MacroCue - Toronto, Canada</div>
+      <div class="tags">
+        <span class="tag">CFA</span>
+        <span class="tag">MFin</span>
+        <span class="tag dim">18+ Yrs Capital Markets</span>
+      </div>
+      <div class="links">
+        <span class="lnk" onclick="topNav('https://www.linkedin.com/in/joseph-sponer')">&#8599; LinkedIn</span>
+        <span class="lnk" onclick="topNav('mailto:info@macrocue.com')">&#8599; Contact</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <p>I have spent 18 years in capital markets, developing a deep understanding of how institutional money moves, how risk is priced, and how volatility behaves across market cycles.</p>
+    <p>The move into volatility as a primary focus was a natural progression. <strong>Most traders treat the VIX as a single number. It isn't.</strong> The term structure, the futures curve, the momentum signals - these tell a story the spot reading alone never can. I built MacroCue because the systematic daily read I needed didn't exist in an accessible form, so I built it for myself first and made it public.</p>
+    <p>The eight signals on the dashboard are exactly what I check each morning. Nothing on this site is theoretical.</p>
+  </div>
+
+  <hr>
+
+  <div class="body"><strong>Credentials</strong></div>
+  <div class="creds">
+    <div class="cred"><div class="cred-val">CFA Charterholder</div><div class="cred-key">CFA Institute</div></div>
+    <div class="cred"><div class="cred-val">Master of Finance</div><div class="cred-key">Queen's University</div></div>
+  </div>
+
+  <hr>
+
+  <div class="body">
+    <div class="body">Everything on this site is free - the live dashboard, the charts, the research archive and the full eight-signal read. If you want the daily Vol Brief in your inbox, add your email below.</div>
+  </div>
+  <div class="sub-section">
+    <form class="sub-form" onsubmit="handleSub(event)">
+      <input class="sub-input" type="email" id="sub-email" placeholder="your@email.com" required>
+      <button class="sub-btn" type="submit" id="sub-btn">Subscribe Free</button>
+    </form>
+    <div class="sub-note">The full daily Vol Brief, delivered every morning. No spam.</div>
+    <button class="dash-link" onclick="topNav('https://www.macrocue.com/macrocue-dashboard')">Open the Live Dashboard &rarr;</button>
+  </div>
+
+</div>
+<script>
+function topNav(url) {
+  try { window.top.location.href = url; } catch(e) {
+    try { window.parent.location.href = url; } catch(e2) { window.location.href = url; }
+  }
+}
+
+function handleSub(e) {
+  e.preventDefault();
+  var email = document.getElementById('sub-email').value.trim();
+  if (!email) return;
+  var btn = document.getElementById('sub-btn');
+  btn.textContent = 'Saving...'; btn.disabled = true;
+  fetch('https://www.macrocue.com/_functions/subscribe', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email, source: 'about'})
+  })
+  .then(function() {
+    btn.textContent = 'Done!'; btn.style.background = 'var(--green-t)';
+    document.getElementById('sub-email').value = '';
+    btn.disabled = false;
+  })
+  .catch(function() {
+    btn.textContent = 'Try Again'; btn.style.background = 'var(--amber)';
+    btn.disabled = false;
+    setTimeout(function() { btn.textContent = 'Subscribe Free'; btn.style.background = ''; }, 3000);
+  });
+}
+</script>
+</body>
+</html>
